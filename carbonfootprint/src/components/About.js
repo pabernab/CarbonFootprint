@@ -3,13 +3,11 @@ import Page from "./Page";
 
 export default function About(props) {
   return (
-    <Page color="#cc99ff" background="#280051">
+    <Page color="#1d2124" background="#f8f9fa">
       <h1>About</h1>
 
       <p>
-        Toffee muffin bear claw ice cream gummies jujubes gingerbread. Apple pie
-        bonbon pastry chocolate bar bear claw wafer bonbon. Marzipan topping
-        wafer topping cake liquorice.
+       This is a test statement. 
       </p>
       <p>
         Wafer bonbon cupcake chocolate bar. Bear claw topping halvah chocolate

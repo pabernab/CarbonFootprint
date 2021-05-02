@@ -45,7 +45,7 @@ function Home() {
               </Form.Control>
             </Form.Group>
             <Button disabled={loading} className="w-100" type="submit">
-              Submit
+              Calculate
             </Button>
           </Form>
         </Card.Body>
