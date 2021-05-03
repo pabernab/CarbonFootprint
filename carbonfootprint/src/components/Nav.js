@@ -15,12 +15,21 @@ export default function Nav() {
       </Link>
       <Link
         to={{
-          pathname: "/about",
+          pathname: "/pagetwo",
           state: { prev: true },
         }}
         className="nav__link"
       >
-        About
+        Page Two
+      </Link>
+      <Link
+        to={{
+          pathname: "/pagethree",
+          state: { prev: true },
+        }}
+        className="nav__link"
+      >
+        Page Three
       </Link>
     </nav>
   );

@@ -1,59 +1,17 @@
-import React, { useRef, useState } from "react";
-import ReactDOM from "react-dom";
-import { Form, Button, Card } from "react-bootstrap";
+import React from "react";
 import Page from "./Page";
-import "bootstrap/dist/css/bootstrap.css";
 
-function Home() {
-  const Q1Ref = useRef();
-  const Q2Ref = useRef();
-
-  const [loading, setLoading] = useState(false);
-
-  async function handleSubmit(e) {
-    e.preventDefault();
-
-    //Do the formula
-    setLoading(true);
-    const results = Q1Ref.current.value;
-
-    const element = <h1>Results: {results} </h1>;
-    ReactDOM.render(element, document.getElementById("Results"));
-
-    setLoading(false);
-  }
-
+export default function Home(props) {
   return (
-    <Page>
-      <Card>
-        <Card.Body style={{ color: "black" }}>
-          <h2 className="text-center mb-4">Carbon Footprint Calculator</h2>
-          <Form onSubmit={handleSubmit}>
-            <Form.Group id="email">
-              <Form.Label>
-                How many vehicles does your household have?
-              </Form.Label>
-              <Form.Control type="Text" ref={Q1Ref} required />
-            </Form.Group>
-            <Form.Group id="password">
-              <Form.Label>
-                Do you perform regular Vehicle maintenence on those vehicles?
-              </Form.Label>
-              <Form.Control as="select" ref={Q2Ref} defaultValue="Yes">
-                <option>Yes</option>
-                <option>No</option>
-              </Form.Control>
-            </Form.Group>
-            <Button disabled={loading} className="w-100" type="submit">
-              Calculate
-            </Button>
-          </Form>
-        </Card.Body>
-      </Card>
+    <Page color="#1d2124" background="#f8f9fa">
+      <p>
+        The average carbon footprint for a person in the United States is 16
+        tons, one of the highest rates in the world.
+      </p>
 
-      <div id="Results" className="w-100 text-center mt-2"></div>
+      <a class="btn btn-primary" href="/pagetwo" role="button">
+        Calculate your carbon footprint
+      </a>
     </Page>
   );
 }
-
-export default Home;

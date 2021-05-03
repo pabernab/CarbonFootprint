@@ -5,7 +5,8 @@ import "bootstrap/dist/css/bootstrap.css";
 import "./style.css";
 import Nav from "./components/Nav";
 import Home from "./components/Home";
-import About from "./components/About";
+import PageTwo from "./components/PageTwo";
+import PageThree from "./components/PageThree";
 
 // Does the user's browser support the HTML5 history API?
 // If the user's browser doesn't support the HTML5 history API then we
@@ -36,7 +37,8 @@ function App() {
                       render={() => (
                         <Switch>
                           <Route exact path="/" component={Home} />
-                          <Route path="/about" component={About} />
+                          <Route path="/pagetwo" component={PageTwo} />
+                          <Route path="/pagethree" component={PageThree} />
                         </Switch>
                       )}
                     />
