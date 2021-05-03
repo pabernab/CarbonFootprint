@@ -15,9 +15,9 @@ function PageTwo() {
 
     //Do the formula
     setLoading(true);
-    const results = Q1Ref.current.value;
+    const results = Q1Ref.current.value * ((219 * 52) / (21.6 * 19.6 * 1.01));
 
-    const element = <h1>Results: {results} </h1>;
+    const element = <h1>Results: {results} of CO2 per year </h1>;
     ReactDOM.render(element, document.getElementById("Results"));
 
     setLoading(false);

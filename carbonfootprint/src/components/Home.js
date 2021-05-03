@@ -1,6 +1,5 @@
 import React from "react";
 import Page from "./Page";
-
 export default function Home(props) {
   return (
     <Page color="#1d2124" background="#f8f9fa">
