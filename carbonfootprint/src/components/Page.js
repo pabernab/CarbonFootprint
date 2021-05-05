@@ -2,8 +2,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import classNames from "classnames";
 import { withRouter } from "react-router-dom";
+import FallingSvg from "./falling";
 
-function Page({ children, color, background, location: { state } }) {
+function Page({ children, color, location: { state } }) {
   const cx = classNames({
     page: true,
     "page--prev": state && state.prev,
@@ -13,7 +14,6 @@ function Page({ children, color, background, location: { state } }) {
       className={cx}
       style={{
         color,
-        background,
       }}
     >
       {children}

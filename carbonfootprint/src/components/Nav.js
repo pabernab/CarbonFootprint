@@ -20,7 +20,7 @@ export default function Nav() {
         }}
         className="nav__link"
       >
-        Page Two
+        Calculator
       </Link>
       <Link
         to={{
@@ -29,7 +29,7 @@ export default function Nav() {
         }}
         className="nav__link"
       >
-        Page Three
+        Learn More
       </Link>
     </nav>
   );
