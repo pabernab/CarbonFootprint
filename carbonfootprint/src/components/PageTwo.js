@@ -43,7 +43,7 @@ function PageTwo() {
     //I made a function to convert Yes and No to 1 and 0 respectively 
     //Example call yesNoConverter(Q2Ref.current.value)
 
-    const element = <h1>Results: You produce {results.toFixed(2)} Pounds of CO2 per year </h1>;
+    const element = <h1>Results: You produce {results.toFixed(2)} Pounds of CO2 per year from your cars. </h1>;
     ReactDOM.render(element, document.getElementById("Results"));
 
     setLoading(false);
@@ -56,9 +56,13 @@ function PageTwo() {
     setLoading(true);
     //Get the user input by Q[N]Ref.current.value
     //Ex. Get input for Question 3 Q3Ref.current.value
-    const results = 500;
+    const natGas = (Q3Ref.current.value/10.68) * 12;
+    const elec = (Q4Ref.current.value/11.9) * 119.58 * 12;
+    const fuelOil = (Q5Ref.current.value/4.02) * 22.61 * 12;
+    const propane = (Q6Ref.current.value/2.47) * 12.43 * 12;
+    const results = natGas + elec + fuelOil + propane;
 
-    const element = <h1>Results: You produce {results.toFixed(2)} Pounds of CO2 per year </h1>;
+    const element = <h1>Results: Your house produces {results.toFixed(2)} Pounds of CO2 per year. </h1>;
     ReactDOM.render(element, document.getElementById("ResultsHE"));
 
     setLoading(false);
@@ -108,14 +112,14 @@ function PageTwo() {
               <Form.Label>
                 How much natural gas does your household use per month?
               </Form.Label>
-              <Form.Control type="Text" ref={Q3Ref} required placeholder = "PAUL PLEASE INPUT THE UNIT" />
+              <Form.Control type="Text" ref={Q3Ref} required placeholder = "Input how much you pay monthly in terms of dollars" />
             </Form.Group>
 
             <Form.Group id="Question">
               <Form.Label>
               How much electricity does your household use per month?
               </Form.Label>
-              <Form.Control type="Text" ref={Q4Ref} required placeholder = "PAUL PLEASE INPUT THE UNIT" />
+              <Form.Control type="Text" ref={Q4Ref} required placeholder = "Input how much you pay monthly for electrcity in dollars " />
             </Form.Group>
 
             <Form.Group id="Question">
@@ -129,14 +133,14 @@ function PageTwo() {
               <Form.Label>
                 How much fuel oil does your household use per month?
               </Form.Label>
-              <Form.Control type="Text" ref={Q6Ref} required  placeholder = "PAUL PLEASE INPUT THE UNIT"/>
+              <Form.Control type="Text" ref={Q6Ref} required  placeholder = "Input how much you pay monthly for fuel oil in dollars"/>
             </Form.Group>
 
             <Form.Group id="Question">
               <Form.Label>
                How much propane does your household use per month?
               </Form.Label>
-              <Form.Control type="Text" ref={Q7Ref} required placeholder = "PAUL PLEASE INPUT THE UNIT" />
+              <Form.Control type="Text" ref={Q7Ref} required placeholder = "Input how much you pay monthly for propane in dollars" />
             </Form.Group>
 
             <Button disabled={loading} className="w-100" type="submit">

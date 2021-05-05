@@ -29,7 +29,7 @@ export default function Nav() {
         }}
         className="nav__link"
       >
-        Learn More
+        About
       </Link>
     </nav>
   );
